@@ -1,90 +1,150 @@
-<!-- Sección 1: Departamentos -->
-<section id="departamentos" style="margin-bottom: 60px;">
-  <h2 style="color:white;">1. Hechos por Departamento, Categoría y Subcategoría</h2>
-  <iframe src='https://flo.uri.sh/visualisation/24129680/embed' title='Treemap Departamento' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-  <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
-    <a class='flourish-credit' href='https://public.flourish.studio/visualisation/24129680/?utm_source=embed&utm_campaign=visualisation/24129680' target='_top' style='text-decoration:none!important'>
-      <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
-    </a>
-  </div>
-  <p style="color:white;">
-    Este **Treemap** permite la interacción con cada bloque que representa un **departamento**, y que a su vez se encuentra subdividido por las **categorías** y **subcategorías** reconocidas dentro del RUV.  
-    <br><br>
-    **Putumayo** registró el mayor número de hechos victimizantes con **142** afectaciones, es decir el **43%** total de la región. Continua **Caquetá** con **84** registros (**25.5%**), **Meta** (**33 hechos**) y **Guaviare** (**29 hechos**) con un **10%** y **8.8%**, respectivamente sobre el registro total.
-    <br><br>
-    Para **Putumayo** y **Caquetá** que documentan juntos más del **68%** de los registros y que las categorías con mayor número de hechos para ambos departamentos son **Ataques contra la población civil** y **Restricción al acceso humanitario**, el análisis sobre las subcategorías indica una naturaleza de las afectaciones propias en cada caso. Por ejemplo, en **Putumayo** se registraron **Secuestros**, **Desplazamientos forzados** y mayor número de acciones relacionadas contra afectaciones directas a la vida e integridad. Por su parte, en **Caquetá**, prácticas como el **Control social armado** se indican con **11 eventos** relacionados a **toques de queda** o **códigos de conducta**, además de **restricciones a la movilidad** que dan cuenta de un conflicto con mayor orientación al **control territorial**.
-  </p>
-</section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Interactivo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #222;
+      padding: 10px 0;
+      text-align: center;
+    }
+    header button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    header button:hover {
+      background-color: #666;
+    }
+    section {
+      padding: 30px;
+      margin: 20px;
+      background-color: #333;
+      border-radius: 8px;
+    }
+    h2 {
+      font-size: 24px;
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
 
-<!-- Sección 2: Municipios -->
-<section id="municipios" style="margin-bottom: 60px;">
-  <h2 style="color:white;">2. Hechos por Municipio</h2>
-  <iframe src='https://flo.uri.sh/visualisation/23976565/embed' title='Gráfico de barras Municipios' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-  <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
-    <a class='flourish-credit' href='https://public.flourish.studio/visualisation/23976565/?utm_source=embed&utm_campaign=visualisation/23976565' target='_top' style='text-decoration:none!important'>
-      <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
-    </a>
-  </div>
-  <p style="color:white;">
-    Este gráfico de **barras dinámico** permite relacionar el número de registros documentados para cada municipio desde **enero a abril**. Aquí se visualizan los **7 municipios** con mayores hechos victimizantes por mes.
-    <br><br>
-    En este sentido, municipios como **Puerto Asís** y **Puerto Guzmán** en **Putumayo** evidencian ser lugares de recurrentes localizaciones afectadas por el conflicto armado. De la misma manera, **Florencia** (**Caquetá**), **San José del Guaviare** y **San Vicente del Caguán** también son un reflejo de territorios con un promedio de **6 eventos por mes**.
-  </p>
-</section>
+  <header>
+    <button onclick="scrollToSection('departamentos')">Departamentos</button>
+    <button onclick="scrollToSection('municipios')">Municipios</button>
+    <button onclick="scrollToSection('hechos')">Hechos</button>
+    <button onclick="scrollToSection('actores')">Actores</button>
+    <button onclick="scrollToSection('genero')">Género</button>
+  </header>
 
-<!-- Sección 3: Hechos -->
-<section id="hechos" style="margin-bottom: 60px;">
-  <h2 style="color:white;">3. Hechos Victimizantes</h2>
-  
-  <h3 style="color:white;">Gráfico de radar</h3>
-  <iframe src='https://flo.uri.sh/visualisation/23974867/embed' title='Gráfico de radar' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-  <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
-    <a class='flourish-credit' href='https://public.flourish.studio/visualisation/23974867/?utm_source=embed&utm_campaign=visualisation/23974867' target='_top' style='text-decoration:none!important'>
-      <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
-    </a>
-  </div>
-  
-  <h3 style="color:white;">Gráfico de barras</h3>
-  <iframe src='https://flo.uri.sh/visualisation/23977377/embed' title='Gráfico de barras' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-  <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
-    <a class='flourish-credit' href='https://public.flourish.studio/visualisation/23977377/?utm_source=embed&utm_campaign=visualisation/23977377' target='_top' style='text-decoration:none!important'>
-      <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
-    </a>
-  </div>
-  <p style="color:white;">
-    La categoría con mayor número de hechos corresponde a **Ataques contra la población civil** con un total de **97 registros**, seguido del **Uso de artefactos explosivos** (**23**), **Acciones armadas** y **Restricción al acceso humanitario** comparten la misma cantidad de hechos (**17 cada uno**), de la misma manera que los **Ataques a objetivos ilícitos de guerra** y el **Desplazamiento forzado** con **3 registros** para cada caso.
-    <br><br>
-    Así mismo, **febrero** fue el mes con el mayor número de afectaciones (**99**), es decir el **30%** del total de los datos, siguiendo **marzo** (**92 hechos**), **enero** (**85**) y **abril** (**54**), siendo aproximadamente el **28%**, **26%** y **16%** correspondientemente. Una categoría que también llama la atención corresponde a la **Restricción al acceso humanitario** que en **enero** correspondió al **3.64%**, **3.33% en febrero** y un aumento al **4.85% en marzo**.
-  </p>
-</section>
+  <!-- Sección 1: Departamentos -->
+  <section id="departamentos">
+    <h2>1. Hechos por Departamento, Categoría y Subcategoría</h2>
+    <iframe src='https://flo.uri.sh/visualisation/24129680/embed' title='Treemap Departamento' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+    <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
+      <a class='flourish-credit' href='https://public.flourish.studio/visualisation/24129680/?utm_source=embed&utm_campaign=visualisation/24129680' target='_top' style='text-decoration:none!important'>
+        <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
+      </a>
+    </div>
+    <p>
+      Este **Treemap** permite la interacción con cada bloque que representa un **departamento**, subdividido por las **categorías** y **subcategorías** reconocidas dentro del RUV.
+      <br><br>
+      **Putumayo** registró el mayor número de hechos victimizantes con **142** afectaciones, es decir el **43%** total de la región. Continua **Caquetá** con **84** registros (**25.5%**), **Meta** (**33 hechos**) y **Guaviare** (**29 hechos**) con un **10%** y **8.8%**, respectivamente sobre el registro total.
+      <br><br>
+      Para **Putumayo** y **Caquetá** que documentan juntos más del **68%** de los registros, las categorías con mayor número de hechos son **Ataques contra la población civil** y **Restricción al acceso humanitario**. El análisis sobre las subcategorías indica una naturaleza de las afectaciones propias en cada caso. Por ejemplo, en **Putumayo** se registraron **Secuestros**, **Desplazamientos forzados** y mayor número de acciones relacionadas contra afectaciones directas a la vida e integridad. Por su parte, en **Caquetá**, prácticas como el **Control social armado** se indican con **11 eventos** relacionados a **toques de queda** o **códigos de conducta**, además de **restricciones a la movilidad** que dan cuenta de un conflicto con mayor orientación al **control territorial**.
+    </p>
+  </section>
 
-<!-- Sección 4: Actores -->
-<section id="actores" style="margin-bottom: 60px;">
-  <h2 style="color:white;">4. Actores Armados</h2>
-  <iframe src='https://flo.uri.sh/visualisation/24129318/embed' title='Gráfico de barras Actores' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-  <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
-    <a class='flourish-credit' href='https://public.flourish.studio/visualisation/24129318/?utm_source=embed&utm_campaign=visualisation/24129318' target='_top' style='text-decoration:none!important'>
-      <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
-    </a>
-  </div>
-  <p style="color:white;">
-    El diagrama de barras indica el “**Estado**” que se define como la situación individual o colectiva en términos de daño físico para cada uno de los actores. La categoría **“Desconocido”** fue reestructurada unificando los registros que en la base original se denominaron como **Desconocido** o que no contenían información. También resulta importante mencionar que algunas categorías pueden incluir más de un actor, pero esta información no se encuentra discriminada para el caso.
-    <br><br>
-    Sin embargo, es posible evidenciar que la mayoría de afectaciones relacionadas con **fallecimientos** se presentó en **civiles** (**30 registros**), seguido de **actores armados no estatales** (**29**), **condición desconocida** (**28**) y **militares** con **20 registros**.
-  </p>
-</section>
+  <!-- Sección 2: Municipios -->
+  <section id="municipios">
+    <h2>2. Hechos por Municipio</h2>
+    <iframe src='https://flo.uri.sh/visualisation/23976565/embed' title='Gráfico de barras Municipios' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+    <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
+      <a class='flourish-credit' href='https://public.flourish.studio/visualisation/23976565/?utm_source=embed&utm_campaign=visualisation/23976565' target='_top' style='text-decoration:none!important'>
+        <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
+      </a>
+    </div>
+    <p>
+      Este gráfico de **barras dinámico** permite relacionar el número de registros documentados para cada municipio desde **enero a abril**. Aquí se visualizan los **7 municipios** con mayores hechos victimizantes por mes.
+      <br><br>
+      En este sentido, municipios como **Puerto Asís** y **Puerto Guzmán** en **Putumayo** evidencian ser lugares de recurrentes localizaciones afectadas por el conflicto armado. De la misma manera, **Florencia** (**Caquetá**), **San José del Guaviare** y **San Vicente del Caguán** también son un reflejo de territorios con un promedio de **6 eventos por mes**.
+    </p>
+  </section>
 
-<!-- Sección 5: Género -->
-<section id="genero" style="margin-bottom: 60px;">
-  <h2 style="color:white;">5. Género</h2>
-  <iframe src='https://flo.uri.sh/visualisation/24129016/embed' title='Gráfico de género' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-  <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
-    <a class='flourish-credit' href='https://public.flourish.studio/visualisation/24129016/?utm_source=embed&utm_campaign=visualisation/24129016' target='_top' style='text-decoration:none!important'>
-      <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
-    </a>
-  </div>
-  <p style="color:white;">
-    El **pictograma** relaciona la cantidad de víctimas para las categorías de **Femenino**, **Masculino** y **Desconocido**. Esta última unificó registros denominados de esta manera y sin registro dentro de la base. También resulta importante señalar que en un hecho victimizante pueden existir más de un género en condición vulnerabilizada, pero dentro de la base original no existe dicha discriminación.
-  </p>
-</section>
+  <!-- Sección 3: Hechos -->
+  <section id="hechos">
+    <h2>3. Hechos Victimizantes</h2>
+    <h3>Gráfico de radar</h3>
+    <iframe src='https://flo.uri.sh/visualisation/23974867/embed' title='Gráfico de radar' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+    <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
+      <a class='flourish-credit' href='https://public.flourish.studio/visualisation/23974867/?utm_source=embed&utm_campaign=visualisation/23974867' target='_top' style='text-decoration:none!important'>
+        <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
+      </a>
+    </div>
+    
+    <h3>Gráfico de barras</h3>
+    <iframe src='https://flo.uri.sh/visualisation/23977377/embed' title='Gráfico de barras' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+    <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
+      <a class='flourish-credit' href='https://public.flourish.studio/visualisation/23977377/?utm_source=embed&utm_campaign=visualisation/23977377' target='_top' style='text-decoration:none!important'>
+        <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
+      </a>
+    </div>
+    <p>
+      La categoría con mayor número de hechos corresponde a **Ataques contra la población civil** con un total de **97 registros**, seguido del **Uso de artefactos explosivos** (**23**), **Acciones armadas** y **Restricción al acceso humanitario** comparten la misma cantidad de hechos (**17 cada uno**), de la misma manera que los **Ataques a objetivos ilícitos de guerra** y el **Desplazamiento forzado** con **3 registros** para cada caso.
+      <br><br>
+      Así mismo, **febrero** fue el mes con el mayor número de afectaciones (**99**), es decir el **30%** del total de los datos, siguiendo **marzo** (**92 hechos**), **enero** (**85**) y **abril** (**54**), siendo aproximadamente el **28%**, **26%** y **16%** correspondientemente. Una categoría que también llama la atención corresponde a la **Restricción al acceso humanitario** que en **enero** correspondió al **3.64%**, **3.33% en febrero** y un aumento al **4.85% en marzo**.
+    </p>
+  </section>
 
+  <!-- Sección 4: Actores -->
+  <section id="actores">
+    <h2>4. Actores Armados</h2>
+    <iframe src='https://flo.uri.sh/visualisation/24129318/embed' title='Gráfico de barras Actores' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+    <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
+      <a class='flourish-credit' href='https://public.flourish.studio/visualisation/24129318/?utm_source=embed&utm_campaign=visualisation/24129318' target='_top' style='text-decoration:none!important'>
+        <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
+      </a>
+    </div>
+    <p>
+      El diagrama de barras indica el **“Estado”** que se define como la situación individual o colectiva en términos de daño físico para cada uno de los actores. La categoría **“Desconocido”** fue reestructurada unificando los registros que en la base original se denominaron como **Desconocido** o que no contenían información. También resulta importante mencionar que algunas categorías pueden incluir más de un actor, pero esta información no se encuentra discriminada para el caso.
+      <br><br>
+      Sin embargo, es posible evidenciar que la mayoría de afectaciones relacionadas con **fallecimientos** se presentó en **civiles** (**30 registros**), seguido de **actores armados no estatales** (**29**), **condición desconocida** (**28**) y **militares** con **20 registros**.
+    </p>
+  </section>
+
+  <!-- Sección 5: Género -->
+  <section id="genero">
+    <h2>5. Género</h2>
+    <iframe src='https://flo.uri.sh/visualisation/24129016/embed' title='Gráfico de género' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+    <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
+      <a class='flourish-credit' href='https://public.flourish.studio/visualisation/24129016/?utm_source=embed&utm_campaign=visualisation/24129016' target='_top' style='text-decoration:none!important'>
+        <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> 
+      </a>
+    </div>
+    <p>
+      El **pictograma** relaciona la cantidad de víctimas para las categorías de **Femenino**, **Masculino** y **Desconocido**. Esta última unificó registros denominados de esta manera y sin registro dentro de la base. También resulta importante señalar que en un hecho victimizante pueden existir más de un género en condición vulnerabilizada, pero dentro de la base original no existe dicha discriminación.
+    </p>
+  </section>
+
+  <script>
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
