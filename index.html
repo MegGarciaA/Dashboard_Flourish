@@ -27,8 +27,8 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      font-weight: bold; /* Negrita */
-      text-transform: uppercase; /* Mayúsculas */
+      font-weight: bold;
+      text-transform: uppercase;
     }
     header button:hover {
       background-color: #666;
@@ -50,13 +50,13 @@
       align-items: flex-start;
     }
     .grafico {
-      flex: 2; /* Ocupa el 2/3 */
+      flex: 2;
       margin-right: 20px;
     }
     .texto {
-      flex: 1; /* Ocupa el 1/3 */
-      text-align: justify; /* Justificar el texto */
-      text-align: center; /* Centrar el texto */
+      flex: 1;
+      text-align: justify;
+      text-align: center;
       margin-top: 20px;
     }
     .encabezado {
@@ -76,12 +76,12 @@
     <button onclick="showSection('genero')">Género</button>
   </header>
 
-  <!-- Sección 1: Departamentos -->
   <section id="departamentos" class="active">
     <div class="encabezado">Departamentos</div>
     <div class="container">
       <div class="grafico">
-        <iframe src='https://flo.uri.sh/visualisation/24129680/embed' title='Treemap Departamento' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+        <iframe src='https://flo.uri.sh/visualisation/24129680/embed' title='Treemap Departamento' class='flourish-embed-iframe' frameborder='0' scrolling='no'
+          style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
       </div>
       <div class="texto">
         Este Treemap permite la interacción con cada bloque que representa un departamento, y que a su vez se encuentra subdividido por las categorías y subcategorías reconocidas dentro del RUV.
@@ -93,91 +93,52 @@
     </div>
   </section>
 
-<!-- Sección 2: Municipios -->
-<section id="municipios">
-  <div class="encabezado">Municipios</div>
-  <div class="container">
-    <div class="grafico">
-      <iframe src='https://flo.uri.sh/visualisation/23976565/embed' title='Gráfico de barras Municipios' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-    </div>
-    <div class="texto">
-      Este gráfico de barras dinámico permite relacionar el número de registros documentados para cada municipio desde enero a abril. Aquí se visualizan los 7 municipios con mayores hechos victimizantes por mes.
-      <br><br>
-      En este sentido, municipios como Puerto Asís y Puerto Guzmán en Putumayo evidencian ser lugares de recurrentes localizaciones afectadas por el conflicto armado. De la misma manera, Florencia Caquetá, San José del Guaviare y San Vicente del Caguán también son un reflejo de territorios con un promedio de 6 eventos por mes.
-    </div>
-  </div>
-</section>
-
-    <div class="texto">
-      Este gráfico de barras dinámico permite relacionar el número de registros documentados para cada municipio desde enero a abril. Aquí se visualizan los 7 municipios con mayores hechos victimizantes por mes.
-      <br><br>
-      En este sentido, municipios como Puerto Asís y Puerto Guzmán en Putumayo evidencian ser lugares de recurrentes localizaciones afectadas por el conflicto armado. De la misma manera, Florencia Caquetá, San José del Guaviare y San Vicente del Caguán también son un reflejo de territorios con un promedio de 6 eventos por mes.
-    </div>
-  </div>
-</section>
-  
-<!-- Sección 3: Hechos -->
-<section id="hechos">
-  <div class="encabezado">Hechos Victimizantes</div>
-  <div class="container">
-    <div class="grafico">
-      <!-- Primer gráfico: Radar -->
-      <iframe src='https://flo.uri.sh/visualisation/23974867/embed' title='Gráfico de radar' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-      
-      <div class="texto">
-        La categoría con mayor número de hechos corresponde a Ataques contra la población civil con un total de 97 registros, seguido del Uso de artefactos explosivos (23), Acciones armadas y Restricción al acceso humanitario comparten la misma cantidad de hechos (17 cada uno), de la misma manera que los Ataques a objetivos ilícitos de guerra y el Desplazamiento forzado con 3 registros para cada caso.
-        <br><br>
-        Así mismo, febrero fue el mes con el mayor número de afectaciones (99), es decir el 30% del total de los datos, siguiendo marzo (92 hechos), enero (85) y abril (54) siendo aproximadamente el 28%, 26% y 16% correspondientemente. Una categoría que también llama la atención corresponde a la Restricción al acceso humanitario que en el mes de enero correspondió al 3.64%, 3.33% en febrero y un aumento al 4.85% para marzo.
+  <section id="municipios">
+    <div class="encabezado">Municipios</div>
+    <div class="container">
+      <div class="grafico">
+        <iframe src='https://flo.uri.sh/visualisation/23976565/embed' title='Gráfico de barras Municipios' class='flourish-embed-iframe' frameborder='0' scrolling='no'
+          style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
       </div>
-
-      <!-- Segundo gráfico agregado -->
-      <iframe src='https://flo.uri.sh/visualisation/23977377/embed' title='Gráfico adicional de hechos' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px; margin-top:30px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-
-      <!-- Texto solo para este gráfico -->
       <div class="texto">
         Este gráfico de barras dinámico permite relacionar el número de registros documentados para cada municipio desde enero a abril. Aquí se visualizan los 7 municipios con mayores hechos victimizantes por mes.
         <br><br>
         En este sentido, municipios como Puerto Asís y Puerto Guzmán en Putumayo evidencian ser lugares de recurrentes localizaciones afectadas por el conflicto armado. De la misma manera, Florencia Caquetá, San José del Guaviare y San Vicente del Caguán también son un reflejo de territorios con un promedio de 6 eventos por mes.
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-      <!-- Segundo gráfico agregado -->
-      <iframe src='https://flo.uri.sh/visualisation/23977377/embed' title='Gráfico adicional de hechos' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px; margin-top:30px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+  <section id="hechos">
+    <div class="encabezado">Hechos Victimizantes</div>
+    <div class="container">
+      <div class="grafico">
+        <iframe src='https://flo.uri.sh/visualisation/23974867/embed' title='Gráfico de radar' class='flourish-embed-iframe' frameborder='0' scrolling='no'
+          style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
 
-      <!-- Texto solo para este gráfico -->
-      <div class="texto">
-        Este gráfico de barras dinámico permite relacionar el número de registros documentados para cada municipio desde enero a abril. Aquí se visualizan los 7 municipios con mayores hechos victimizantes por mes.
-        <br><br>
-        En este sentido, municipios como Puerto Asís y Puerto Guzmán en Putumayo evidencian ser lugares de recurrentes localizaciones afectadas por el conflicto armado. De la misma manera, Florencia Caquetá, San José del Guaviare y San Vicente del Caguán también son un reflejo de territorios con un promedio de 6 eventos por mes.
-      </div>
+        <div class="texto">
+          La categoría con mayor número de hechos corresponde a Ataques contra la población civil con un total de 97 registros, seguido del Uso de artefactos explosivos (23), Acciones armadas y Restricción al acceso humanitario comparten la misma cantidad de hechos (17 cada uno), de la misma manera que los Ataques a objetivos ilícitos de guerra y el Desplazamiento forzado con 3 registros para cada caso.
+          <br><br>
+          Así mismo, febrero fue el mes con el mayor número de afectaciones (99), es decir el 30% del total de los datos, siguiendo marzo (92 hechos), enero (85) y abril (54) siendo aproximadamente el 28%, 26% y 16% correspondientemente. Una categoría que también llama la atención corresponde a la Restricción al acceso humanitario que en el mes de enero correspondió al 3.64%, 3.33% en febrero y un aumento al 4.85% para marzo.
+        </div>
 
-      <!-- Crédito de Flourish -->
-      <div style='width:100%!;margin-top:4px!important;text-align:right!important;'>
-        <a class='flourish-credit' href='https://public.flourish.studio/visualisation/23977377/?utm_source=embed&utm_campaign=visualisation/23977377' target='_top' style='text-decoration:none!important'>
-          <img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'>
-        </a>
+        <iframe src='https://flo.uri.sh/visualisation/23977377/embed' title='Gráfico adicional de hechos' class='flourish-embed-iframe' frameborder='0' scrolling='no'
+          style='width:100%;height:600px;margin-top:30px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+
+        <div class="texto">
+          Este gráfico de barras dinámico permite relacionar el número de registros documentados para cada municipio desde enero a abril. Aquí se visualizan los 7 municipios con mayores hechos victimizantes por mes.
+          <br><br>
+          En este sentido, municipios como Puerto Asís y Puerto Guzmán en Putumayo evidencian ser lugares de recurrentes localizaciones afectadas por el conflicto armado. De la misma manera, Florencia Caquetá, San José del Guaviare y San Vicente del Caguán también son un reflejo de territorios con un promedio de 6 eventos por mes.
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-    <div class="texto">
-      La categoría con mayor número de hechos corresponde a Ataques contra la población civil con un total de 97 registros, seguido del Uso de artefactos explosivos (23), Acciones armadas y Restricción al acceso humanitario comparten la misma cantidad de hechos (17 cada uno), de la misma manera que los Ataques a objetivos ilícitos de guerra y el Desplazamiento forzado con 3 registros para cada caso.
-      <br><br>
-      Así mismo, febrero fue el mes con el mayor número de afectaciones (99), es decir el 30% del total de los datos, siguiendo marzo (92 hechos), enero (85) y abril (54) siendo aproximadamente el 28%, 26% y 16% correspondientemente. Una categoría que también llama la atención corresponde a la Restricción al acceso humanitario que en el mes de enero correspondió al 3.64%, 3.33% en febrero y un aumento al 4.85% para marzo.
-    </div>
-  </div>
-</section>
-
-  <!-- Sección 4: Actores -->
   <section id="actores">
     <div class="encabezado">Actores Armados</div>
     <div class="container">
       <div class="grafico">
-        <iframe src='https://flo.uri.sh/visualisation/24129318/embed' title='Gráfico de barras Actores' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+        <iframe src='https://flo.uri.sh/visualisation/24129318/embed' title='Gráfico de barras Actores' class='flourish-embed-iframe' frameborder='0' scrolling='no'
+          style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
       </div>
       <div class="texto">
         El diagrama de barras indica el “Estado” que se define como la situación individual o colectiva en términos de daño físico para cada uno de los actores. La categoría “Desconocido” fue reestructurada unificando los registros que en la base original se denominaron como Desconocido o que no contenían información. También resulta importante mencionar que algunas categorías pueden incluir más de un actor, pero esta información no se encuentra discriminada para el caso.
@@ -187,12 +148,12 @@
     </div>
   </section>
 
-  <!-- Sección 5: Género -->
   <section id="genero">
     <div class="encabezado">Género</div>
     <div class="container">
       <div class="grafico">
-        <iframe src='https://flo.uri.sh/visualisation/24129016/embed' title='Gráfico de género' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+        <iframe src='https://flo.uri.sh/visualisation/24129016/embed' title='Gráfico de género' class='flourish-embed-iframe' frameborder='0' scrolling='no'
+          style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
       </div>
       <div class="texto">
         El pictograma relaciona la cantidad de víctimas para las categorías de Femenino, Masculino y Desconocido. Esta última unificó registros denominados de esta manera y sin registro dentro de la base. También resulta importante señalar que en un hecho victimizante pueden existir más de un género en condición vulnerabilizada, pero dentro de la base original no existe dicha discriminación.
@@ -202,13 +163,10 @@
 
   <script>
     function showSection(sectionId) {
-      // Ocultar todas las secciones
       var sections = document.querySelectorAll('section');
       sections.forEach(function(section) {
         section.classList.remove('active');
       });
-      
-      // Mostrar la sección seleccionada
       document.getElementById(sectionId).classList.add('active');
     }
   </script>
